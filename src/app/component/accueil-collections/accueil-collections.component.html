@@ -1,0 +1,54 @@
+<div class="collection">
+  <h3>All Collection</h3>
+  <div class="category-bar">
+    <div class="primary-btnn" routerLink="/collections" style="font-size: 20px">
+      All Collection
+    </div>
+    <div class="primary-btn" routerLink="/animalerie" style="font-size: 20px">
+      Animalerie
+    </div>
+    <div class="primary-btn" routerLink="/veterinaire" style="font-size: 20px">
+      Vétérinaire
+    </div>
+    <div class="primary-btn" routerLink="/dresseur" style="font-size: 20px">
+      Dresseur
+    </div>
+    <div class="primary-btn" routerLink="/psychologe" style="font-size: 20px">
+      Psychologe
+    </div>
+    <div class="primary-btn" routerLink="/client" style="font-size: 20px">
+      Client
+    </div>
+
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search..."
+      [(ngModel)]="term"
+    />
+  </div>
+  <div class="selected-collection">
+    <div *ngFor="let p of pub | recherche: term" class="collection-card">
+      <h5 class="card-name" style="color: black;margin: 7%;">{{p.nom}}</h5>
+      <img src="http://localhost:8080/client/files/{{p.image}}" alt="" />
+      <div class="card-description">
+        <p class="card-text" >{{p.description}}</p>
+        <hr class=""/>
+              <div class="justify-content-between">
+                <p class="card-descriptions">Type : {{p.type}}</p>
+              <p class="card-descriptions">Email : {{p.email}}</p>
+              <p class="card-descriptions">Telephone : {{p.tel}}</p></div>
+
+
+        <h2>Publié : {{p.datePublication}}  </h2>
+
+      </div>
+      <div class="primary-btn" (click)="contact(p.id)" style="font-size: 25px;margin-top: 10%;">Contact </div>
+
+    </div>
+
+  </div>
+  <div class="load"></div>
+</div>

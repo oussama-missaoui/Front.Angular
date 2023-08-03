@@ -1,0 +1,27 @@
+
+
+<div class="collection">
+  <h3>Mes Publication</h3>
+
+  <div class="selected-collection">
+    <div *ngFor="let p of pub" class="card">
+      <h5 class="card-name" style="color: black;margin: 7%;">{{p.nom}}</h5>
+      <img src="http://localhost:8080/client/files/{{p.image}}" alt="" />
+      <div class="card-description">
+        <p class="card-text" style="text-align:left; margin: 4%;">{{p.description}}</p>
+        <hr class=""/>
+              <div class="justify-content-between">
+                <p class="card-description">Type : {{p.type}}</p>
+              <p class="card-description">Email : {{p.email}}</p>
+              <p class="card-description">Telephone : {{p.tel}}</p></div>
+
+
+        <h2>Publié : {{p.datePublication}}  </h2>
+      </div>
+    </div>
+
+  </div>
+  <div class="load">
+
+  </div>
+</div>

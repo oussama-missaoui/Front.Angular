@@ -1,0 +1,133 @@
+<div class="header">
+  <div class="left-content">
+    <h1 class="title"> To keep your pets safe and train them to play with you.</h1>
+    <p class="para">
+     We provide the addresses, advice and equipment to take good care of your animals.
+      In addition, we offer pet health consulting services.
+    </p>
+    <div class="explore">
+      <div class="primary-btn" style="font-size: 20px">Explore Now</div>
+      <div class="customers">
+        <h2>2.5K+</h2>
+        <p>Customers</p>
+      </div>
+      <div class="collections">
+        <h2>370K+</h2>
+        <p>Collections</p>
+      </div>
+    </div>
+  </div>
+  <div class="right-content">
+    <div class="card">
+      <img src="./assets/cat.avif" alt="cat" />
+      <div class="card-description">
+        <span class="card-name">Kocent Orent</span>
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about-us">
+  <h3>Meet your pet's needs so they live happily</h3>
+  <div class="about-us-cards">
+    <div class="about-us-card active">
+      <div class="card-header">
+        <div class="image-container">
+          <img src="./assets/vet.webp" alt="doctor" class="rounded-image" />
+        </div>
+        <h4>Animal health consultation</h4>
+      </div>
+      <div class="card-paragraph">
+        <p>We provide food, equipement, and we provide pets too.</p>
+      </div>
+    </div>
+    <div class="about-us-card">
+      <div class="card-header">
+        <div class="image-container">
+          <img src="./assets/vet.webp" alt="doctor" class="rounded-image" />
+        </div>
+        <h4>Buy equipement & pet food</h4>
+      </div>
+      <div class="card-paragraph">
+        <p>We provide food, equipement, and we provide pets too.</p>
+      </div>
+    </div>
+    <div class="about-us-card">
+      <div class="card-header">
+        <div class="image-container">
+          <img src="./assets/vet.webp" alt="doctor" class="rounded-image" />
+        </div>
+        <h4>Buy a new collection of pets</h4>
+      </div>
+      <div class="card-paragraph">
+        <p>We provide food, equipement, and we provide pets too.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-information">
+    <div class="left-section-inf">
+      <img
+        src="./assets//information-picture.PNG"
+        alt="information-picture"
+      />
+    </div>
+    <div class="right-section-inf">
+      <h3>Find a large collection of complete pets</h3>
+      <p>
+        We provide food, equipement, and we provide pets too. In additon we
+        providepet health consulting services.
+      </p>
+      <div class="primary-btn" style="font-size: 20px">Explore Now</div>
+    </div>
+  </div>
+</div>
+<div class="varieties">
+  <span style="margin-left: -10px">persian cat </span>
+  <svg height="40" width="40">
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+  <span>british shorthair</span>
+  <svg height="40" width="40">
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+  <span>buldog</span>
+  <svg height="40" width="40">
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+  <span>golden retriever</span>
+  <svg height="40" width="40">
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+  <span>Holland lop</span>
+</div>
+<div class="collection">
+  <h3>Our best collection</h3>
+  <div class="category-bar">
+    <a href="" class="active"><p>Cat</p> </a>
+    <a href=""><p>Dog</p></a>
+    <a href=""><p>Rabbit</p></a>
+    <a href=""><p>Hamster</p></a>
+  </div>
+  <div class="selected-collection">
+    <div *ngFor="let p of pub" class="collection-card">
+      <h5 class="card-name" style="color: black;margin: 7%;">{{p.nom}}</h5>
+      <img src="http://localhost:8080/client/files/{{p.image}}" alt="" />
+      <div class="card-description">
+        <p class="card-text" style="text-align:left; margin: 4%;">{{p.description}}</p>
+        <hr class=""/>
+              <div class="justify-content-between">
+                <p class="card-description">Type : {{p.type}}</p>
+              <p class="card-description">Email : {{p.email}}</p>
+              <p class="card-description">Telephone : {{p.tel}}</p></div>
+
+
+        <h2>Publié : {{p.datePublication}}  </h2>
+      </div>
+    </div>
+
+  </div>
+  <div class="load">
+    <h2 routerLink="collections">See More</h2>
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>

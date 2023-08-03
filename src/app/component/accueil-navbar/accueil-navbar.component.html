@@ -1,0 +1,27 @@
+
+<div class="bo">
+<div class="nav">
+  <div class="logo"><img src="./assets/P1.png" alt="" style="min-height: 80px; min-width: 130px;"/></div>
+  <div class="nav-links">
+    <ul>
+      <li><a class="aa"  routerLink="">Home</a></li>
+      <li><a>About us</a></li>
+      <li *ngIf="util==2"><a class="aa" routerLink="collections">Collections</a></li>
+      <li *ngIf="util==2"><a class="aa" routerLink="addPub">Add Collection</a></li>
+      <li *ngIf="util==2"><a class="aa" routerLink="mesPub">My Collections</a></li>
+      <li><a class="aa" routerLink="advice">Our Advice</a></li>
+      <li><a class="aa" routerLink="contact">Contact</a></li>
+     
+
+    </ul>
+  </div>
+  <div *ngIf="util==0" class="second-link">
+    <div class="bag"><img src="./assets/bag.png" alt="shop" /></div>
+    <div class="primary-btn" routerLink="login">Log in</div>
+  </div>
+  <div *ngIf="util==2" class="second-link">
+    <div class="bag"><img src="./assets/bag.png" alt="shop" /></div>
+    <div class="primary-btn" (click)="logOut()">Log out</div>
+  </div>
+</div>
+</div>

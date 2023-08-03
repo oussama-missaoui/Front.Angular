@@ -1,0 +1,45 @@
+<div class="bo">
+  <!-- Navbar -->
+
+  <div
+    class="header"
+    style="
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding: 50px;
+    "
+  >
+    <div class="contact-mail">
+      <h2> Publication </h2>
+      <h3>Add Publication </h3>
+      <p style="margin-top: 10px; margin-bottom: 10px">
+        Get your space suit ready and tell me your ideas to develop your dream
+        application.
+      </p>
+      <span style="font-weight: 700">HomePet@mail.com</span>
+    </div>
+    <div class="contact-form">
+      <form [formGroup]="formGroup" (ngSubmit)="addPub()">
+        <span>NAME: </span>
+        <input type="text" formControlName="nom" name="nom" />
+        <span>TELEPHONE: </span>
+        <input type="text" formControlName="tel" name="tel" />
+        <span>E-MAIL: </span>
+        <input type="text" formControlName="email" name="email" />
+        <span>DESCRIPTION: </span>
+        <textarea name="message" formControlName="description" id="message" cols="30" rows="10"></textarea>
+
+        <div class="custom-file">
+          <input type="file"  class="custom-file-input" (change)="handleFileInput($event)">
+         <label class="custom-file-label">Image</label>
+         </div>
+         <button type="submit" class="primary-btn" style="margin-top: 20px;">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+

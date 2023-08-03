@@ -1,0 +1,89 @@
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="content-wrapper d-flex align-items-center auth px-0">
+      <div class="row w-100 mx-0">
+        <div class="col-lg-4 mx-auto">
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <div class="brand-logo">
+              <img src="assets/images/logo.svg" alt="logo">
+            </div>
+            <h4>Bienvenue</h4>
+            <h6 class="fw-light">connectez-vous pour continuer.</h6>
+            <form [formGroup]="formGroup" (ngSubmit)="addClient()" class="pt-3">
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" formControlName="nom"  id="nom"
+                  placeholder="Nom">
+                  <div style="color:red;" *ngIf="formGroup.get('nom')?.hasError('required') && submitted" class="alert alert-danger">
+                    Nom oblgatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" formControlName="prenom" id="prenom"
+                  placeholder="Prenom">
+                  <div style="color:red;" *ngIf="formGroup.get('prenom')?.hasError('required') && submitted" class="alert alert-danger">
+                    Prenom obligatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control form-control-lg" formControlName="email"  id="email"
+                  placeholder="Email">
+                  <div style="color:red;" *ngIf="formGroup.get('email')?.hasError('required') && submitted" class="alert alert-danger">
+                    Email obligatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control form-control-lg" formControlName="password" id="password"
+                  placeholder="Password">
+                  <div style="color:red;" *ngIf="formGroup.get('password')?.hasError('required') && submitted" class="alert alert-danger">
+                    Password obligatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" formControlName="cin"  id="cin"
+                  placeholder="CIN">
+                  <div style="color:red;" *ngIf="formGroup.get('cin')?.hasError('required') && submitted" class="alert alert-danger">
+                    Cin obligatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" formControlName="tel" id="tel"
+                  placeholder="Telephone">
+                  <div style="color:red;" *ngIf="formGroup.get('tel')?.hasError('required') && submitted" class="alert alert-danger">
+                    Telephone obligatoire
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" formControlName="adresse"  id="adresse"
+                  placeholder="Adresse">
+
+              </div>
+              <div class="custom-file">
+                <input type="file"  class="custom-file-input" (change)="handleFileInput($event)">
+               <label class="custom-file-label">Image</label>
+               <div style="color:red;" *ngIf="formGroup.get('image')?.hasError('required') && submitted" class="alert alert-danger">
+                Image obligatoire
+              </div>
+               </div>
+               <br>
+
+              <button style="margin-right: 14%;" type="submit" type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
+                S'inscrire</button>
+              <a type="button" routerLink="../login" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
+                S'identifier</a>
+              <div class="my-2 d-flex justify-content-between align-items-center">
+
+
+
+                <a  class="auth-link text-black" type="submit">Mot de passe oublier?</a>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content-wrapper ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>

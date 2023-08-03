@@ -1,0 +1,74 @@
+
+<div class="content-wrapper ">
+  <div class="row">
+    <div class="col-md-9 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Add Client</h4>
+
+          <form [formGroup]="formGroup" (ngSubmit)="addClient()" class="forms-sample">
+            <div class="form-group">
+
+              <label >Nom</label>
+              <input type="text" class="form-control" formControlName="nom" id="nom" placeholder="nom">
+              <div style="color:red;" *ngIf="formGroup.get('nom')?.hasError('required') && submitted" class="alert alert-danger">
+                Nom oblgatoire
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Prenom</label>
+              <input type="email" class="form-control" formControlName="prenom" id="prenom" placeholder="prenom">
+              <div style="color:red;" *ngIf="formGroup.get('prenom')?.hasError('required') && submitted" class="alert alert-danger">
+                Prenom obligatoire
+              </div>
+            </div>
+            <div class="form-group">
+              <label >Email</label>
+              <input type="text" class="form-control" formControlName="email" id="email" placeholder="email">
+              <div style="color:red;" *ngIf="formGroup.get('email')?.hasError('required') && submitted" class="alert alert-danger">
+                Email obligatoire
+              </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password"id="password" placeholder="password">
+                <div style="color:red;" *ngIf="formGroup.get('password')?.hasError('required') && submitted" class="alert alert-danger">
+                  Password obligatoire
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Cin</label>
+                <input type="text" class="form-control" formControlName="cin" id="cin" placeholder="Cin">
+                <div style="color:red;" *ngIf="formGroup.get('cin')?.hasError('required') && submitted" class="alert alert-danger">
+                  Cin obligatoire
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Telephone</label>
+                <input type="text" class="form-control" formControlName="tel" id="tel" placeholder="Telephone">
+                <div style="color:red;" *ngIf="formGroup.get('tel')?.hasError('required') && submitted" class="alert alert-danger">
+                  Telephone obligatoire
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Adresse</label>
+                <input type="text" class="form-control" formControlName="adresse" id="adresse" placeholder="adresse">
+              </div>
+              <div class="custom-file">
+                <input type="file"  class="custom-file-input" (change)="handleFileInput($event)">
+               <label class="custom-file-label">Image</label>
+               <div style="color:red;" *ngIf="formGroup.get('image')?.hasError('required') && submitted" class="alert alert-danger">
+                Image obligatoire
+              </div>
+               </div>
+               <br>
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <button class="btn btn-light" routerLink="../client">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

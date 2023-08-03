@@ -1,0 +1,44 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/home">
+      <i class="mdi mdi-grid-large menu-icon"></i>
+      <span class="menu-title">Dashboard</span>
+    </a>
+  </li>
+  <li class="nav-item nav-category">Client</li>
+        <li  class="nav-item ">
+          <a  class="nav-link active-link" data-bs-toggle="collapse" routerLink="/home" aria-expanded="false" aria-controls="ui-basic">
+            <i class="menu-icon mdi mdi-account-card-details"></i>
+            <span class="menu-title">Liste Client</span>
+            <i class="menu-arrow"></i>
+          </a></li>
+          <li  class="nav-item">
+          <a class="nav-link active-link" data-bs-toggle="collaps" routerLink="/home/addClient" aria-expanded="fals" aria-controls="ui-basi">
+            <i class="menu-icon mdi mdi-account"></i>
+            <span class="menu-title">Ajouter Client</span>
+            <i class="menu-arrow"></i>
+          </a>
+        </li>
+
+        <li class="nav-item nav-category">Publication</li>
+        <li class="nav-item">
+          <a class="nav-link active-link" data-bs-toggle="collapse" routerLink="/home/listePub" aria-expanded="false" aria-controls="publi">
+            <i class="menu-icon mdi mdi-table"></i>
+            <span class="menu-title">Liste Publication</span>
+            <i class="menu-arrow"></i>
+          </a></li>
+          <li class="nav-item">
+          <a class="nav-link active-link" data-bs-toggle="collapse" routerLink="/home/addePub" aria-expanded="false" aria-controls="publi">
+            <i class="menu-icon mdi mdi-card-text-outline"></i>
+            <span class="menu-title">Add Publication</span>
+            <i class="menu-arrow"></i>
+          </a>
+        </li>
+
+
+  <li style="margin-top: 80%;" class="nav-item nav-category">lOGOUT</li>
+  <li class="nav-item">
+    <a class="dropdown-item" (click)="logOut()"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+
+  </li>
+</ul>

@@ -1,0 +1,48 @@
+<div *ngFor="let p of pub" class="container-fluid col-6">
+  <div  class="card">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div><h4 class="card-title"><p> {{p.nom}}</p></h4></div>
+                   <!-- <a class="menu-icon mdi mdi-account" (click)="update(p.id)"></a>
+
+                 <mat-icon>settings</mat-icon> -->
+                 <a class="menu-icon mdi mdi-archive" routerLink="../updatePub/{{p.id}}"></a>
+                 
+
+
+
+                </div>
+                <hr class="my-1"/>
+                <p class="card-description">{{p.description}}</p>
+                <hr class="my-1"/>
+                <div class="d-flex justify-content-between">
+                  <p class="card-description">Type : {{p.type}}</p>
+                <p class="card-description">Email : {{p.email}}</p>
+                <p class="card-description">Telephone : {{p.tel}}</p></div>
+
+                  <div class="template-demo d-flex justify-content-between flex-nowrap">
+                      <div class="card-body p-3">
+
+                      <img class="mb-12 mt-12 rounded-2 w-100 " src="http://localhost:8080/client/files/{{p.image}}" alt="">
+                  </div>
+
+                  </div>
+                  <p class="card-description">Publié : {{p.datePublication}}</p>
+                  <div class="template-demo d-flex justify-content-between flex-nowrap text-center ">
+                  <button type="submit" class="btn btn-inverse-danger btn-icon" (click)="delete(p.id)" >
+                      <i class="mdi mdi-close"></i>
+                  </button>
+
+
+              </div>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+  <br>
+</div>
